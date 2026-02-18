@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Proper Metallic Gold Effect</title>
+    <style>
+        body {
+            background: #0f0f0f;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 60px;
+            color: white;
+        }
+
+        /* Proper metallic gold text with gradient clip */
+        .pure-gold {
+            font-size: 48px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: linear-gradient(135deg, #FFD700 0%, #FFEA00 25%, #FECA00 50%, #D4AF37 75%, #B8860B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow:
+                2px 2px 4px rgba(0, 0, 0, 0.5),
+                -1px -1px 2px rgba(255, 255, 255, 0.3),
+                0 0 20px rgba(255, 215, 0, 0.5);
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            border-radius: 12px;
+            box-shadow:
+                inset 0 2px 4px rgba(255, 255, 255, 0.4),
+                inset 0 -2px 4px rgba(0, 0, 0, 0.4),
+                0 8px 25px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Enhanced gold button */
+        .gold-button {
+            background: linear-gradient(135deg, #FFD700 0%, #FFEA00 30%, #FECA00 60%, #D4AF37 90%, #B8860B 100%);
+            border: none;
+            padding: 18px 50px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #3a2f00;
+            border-radius: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow:
+                inset 0 2px 4px rgba(255, 255, 255, 0.6),
+                inset 0 -3px 6px rgba(139, 117, 0, 0.4),
+                0 8px 20px rgba(0, 0, 0, 0.6),
+                0 0 20px rgba(255, 215, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gold-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow:
+                inset 0 2px 4px rgba(255, 255, 255, 0.6),
+                inset 0 -3px 6px rgba(139, 117, 0, 0.4),
+                0 12px 30px rgba(0, 0, 0, 0.7),
+                0 0 40px rgba(255, 215, 0, 0.8);
+        }
+
+        .gold-button:active {
+            transform: translateY(-1px);
+        }
+
+        /* Additional gold boxes for variety */
+        .gold-box {
+            display: inline-block;
+            margin: 20px;
+            padding: 20px 40px;
+            border-radius: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #3a2f00;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .gold-solid {
+            background: #FFD700;
+        }
+
+        .gold-dark {
+            background: linear-gradient(135deg, #D4AF37, #B8860B);
+        }
+
+        .gold-gradient {
+            background: linear-gradient(45deg, #d19e1d 0%, #ffd86e 50%, #e3a812 100%);
+        }
+
+        [web:2][page:1]
+    </style>
+</head>
+
+<body>
+    <div class="pure-gold">Pure Gold Effect</div>
+
+    <div class="gold-box gold-solid">Solid Gold</div>
+    <div class="gold-box gold-dark">Dark Gold</div>
+    <div class="gold-box gold-gradient">Metallic Gradient</div>
+
+    <br><br>
+    <button class="gold-button">Click for Gold!</button>
+</body>
+
+</html>
